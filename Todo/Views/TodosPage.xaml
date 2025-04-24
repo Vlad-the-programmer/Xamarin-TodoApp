@@ -1,0 +1,110 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Todo.Views.TodosPage"
+    xmlns:behaviors="clr-namespace:Todo.Behaviors"
+    xmlns:converters="clr-namespace:Todo.Converters"
+    xmlns:vms="clr-namespace:Todo.ViewModels"
+    Title="{Binding PageTitle}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:IsDoneToImageSourceConverter x:Key="isDoneToImageSource" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+        <SearchBar Placeholder="Search..." x:Name="Searcher" SearchCommand="{Binding SearchCommand}" SearchCommandParameter="{Binding Text, Source={x:Reference Searcher}}">
+            <SearchBar.Behaviors>
+                <behaviors:TextChangedBehavior />
+            </SearchBar.Behaviors>
+        </SearchBar>
+
+        <!-- Show Login Message if User is Not Logged In -->
+        <Label Text="Login to see todos" 
+           HorizontalOptions="Center" 
+           VerticalOptions="CenterAndExpand"
+           IsVisible="{Binding IsUserLoggedOut}" 
+           FontSize="Large" 
+           TextColor="Red"/>
+        
+        <!--<ListView x:Name="TodosListView" ItemTapped="ItemTapped" ItemsSource="{Binding Todos}" SeparatorVisibility="None" RowHeight="48">-->
+        <RefreshView Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}">
+            <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Todos}"
+                SelectionMode="Single">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <!-- Tap Gesture Recognizer on the whole item -->
+                            <StackLayout.GestureRecognizers>
+                                <!--<TapGestureRecognizer 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=ItemTapped}"    
+                                    CommandParameter="{Binding .}" />-->
+                                <TapGestureRecognizer Tapped="OnTodoTapped" />
+
+                            </StackLayout.GestureRecognizers>
+
+                            <!-- Image -->
+                            <Image Aspect="AspectFit" Source="{Binding IsDone, Converter={StaticResource isDoneToImageSource}}" 
+            WidthRequest="30" HeightRequest="30" />
+
+                            <!-- Label -->
+                            <Label Text="{Binding Text}" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+
+                            <!-- Buttons (Details, Update, Remove) -->
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                <Button Text="Details" Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DetailCommand}" 
+                CommandParameter="{Binding .}" Style="{StaticResource DetailButtonStyle}" />
+                                <Button Text="Update" Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.UpdateCommand}" 
+                CommandParameter="{Binding .}" Style="{StaticResource UpdateButtonStyle}" />
+                                <Button Text="Remove" Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.RemoveCommand}" 
+                CommandParameter="{Binding .}" Style="{StaticResource DeleteButtonStyle}" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </StackLayout>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="AddTodoToolbarItem" Text="Add" Command="{Binding AddTodoCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS,Android" Value="ic_add.png" />
+                    <On Platform="UWP" Value="Images/ic_add.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem x:Name="LoginToolbarItem" Text="Login" Command="{Binding LoginCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS,Android" Value="login.png" />
+                    <On Platform="UWP" Value="Images/login.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem x:Name="RegisterToolbarItem" Text="Register" Command="{Binding RegisterCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS,Android" Value="register.png" />
+                    <On Platform="UWP" Value="Images/register.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem x:Name="LogoutToolbarItem" Text="Logout" Command="{Binding LogoutCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS,Android" Value="logout.png" />
+                    <On Platform="UWP" Value="Images/logout.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+</ContentPage>

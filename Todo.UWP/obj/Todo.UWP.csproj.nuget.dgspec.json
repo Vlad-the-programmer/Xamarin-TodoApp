@@ -1,0 +1,117 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo.UWP\\Todo.UWP.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo.UWP\\Todo.UWP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo.UWP\\Todo.UWP.csproj",
+        "projectName": "Todo.UWP",
+        "projectPath": "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo.UWP\\Todo.UWP.csproj",
+        "packagesPath": "C:\\Users\\klamc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo.UWP\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\klamc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.22621"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.22621": {
+            "projectReferences": {
+              "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo\\Todo.csproj": {
+                "projectPath": "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo\\Todo.csproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "uap10.0.22621": {
+          "dependencies": {
+            "Microsoft.NETCore.UniversalWindowsPlatform": {
+              "target": "Package",
+              "version": "[6.2.14, )"
+            },
+            "PCLStorage": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2662, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo\\Todo.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo\\Todo.csproj",
+        "projectName": "Todo",
+        "projectPath": "C:\\Users\\klamc\\source\\repos\\App1\\App\\Todo\\Todo.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "portable45-net45+win8+wpa81": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "portable45-net45+win8+wpa81": {}
+      }
+    }
+  }
+}

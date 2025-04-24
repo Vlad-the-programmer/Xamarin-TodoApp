@@ -1,0 +1,2 @@
+C:\Users\klamc\source\repos\App1\App\Todo.UWP\Todo.UWP.csproj;x86
+C:\Users\klamc\source\repos\App1\App\Todo\Todo.csproj;neutral

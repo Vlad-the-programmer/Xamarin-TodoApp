@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todo.Views.RegisterView" Title="{Binding PageTitle}">
+    <ContentPage.Content>
+        <StackLayout Padding="30" VerticalOptions="Center">
+            <!-- Title -->
+            <Label Text="Create Account"
+                FontSize="32"
+                HorizontalOptions="Center"
+                TextColor="White"
+                FontAttributes="Bold"/>
+
+            <!-- Username -->
+            <Entry Placeholder="Username"
+                Text="{Binding Username}"
+                TextColor="Black"
+                PlaceholderColor="#BDC3C7"
+                BackgroundColor="Transparent"/>
+
+            <!-- Email -->
+            <Entry Placeholder="Email (Optional)"
+                Text="{Binding Email}"
+                TextColor="Black"
+                PlaceholderColor="#BDC3C7"
+                BackgroundColor="Transparent"/>
+
+            <!-- Password -->
+            <Entry Placeholder="Password"
+                IsPassword="True"
+                Text="{Binding Password}"
+                TextColor="Black"
+                PlaceholderColor="#BDC3C7"
+                BackgroundColor="Transparent"/>
+
+            <!-- Register Button -->
+            <Button Text="Sign Up"
+                 BackgroundColor="#E74C3C"
+                 TextColor="White"
+                 FontSize="18"
+                 CornerRadius="25"
+                 HeightRequest="50"
+                 Command="{Binding RegisterCommand}"/>
+
+            <!-- Already have an account -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Already have an account?" TextColor="White" FontSize="14"/>
+                    <Label Text="Login" TextColor="#E74C3C" FontSize="14" FontAttributes="Bold">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

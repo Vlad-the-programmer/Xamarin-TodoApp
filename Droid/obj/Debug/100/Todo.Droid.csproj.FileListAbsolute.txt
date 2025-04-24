@@ -1,0 +1,16 @@
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\MonoAndroid,Version=v10.0.AssemblyAttributes.cs
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\build.props
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\adb.props
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\Todo.Droid.csproj.AssemblyReference.cache
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\stamp\_BuildLibraryImportsCache.stamp
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\res.flag
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\lp\0\jl\files.cache
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\lp\6\jl\files.cache
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\lp\9\jl\files.cache
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\lp\11\jl\files.cache
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\lp\12\jl\files.cache
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\lp\13\jl\files.cache
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\lp\15\jl\files.cache
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\R.txt
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\R.cs.flag
+C:\Users\klamc\source\repos\App1\App\Droid\obj\Debug\100\Todo.Droid.csproj.CoreCompileInputs.cache

@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>VLAD</Machine>
+    <WindowsUser>klamc</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>6d8fd51b-7673-493e-a576-7562a0bc4b8b</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Bryan</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\klamc\source\repos\App1\App\Todo.UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Core\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Todo.UWP.exe">
+      <PackagePath>entrypoint\Todo.UWP.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\pclstorage\1.0.2\lib\portable-win8+wpa81\PCLStorage.Abstractions.dll">
+      <PackagePath>PCLStorage.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\pclstorage\1.0.2\lib\portable-win8+wpa81\PCLStorage.dll">
+      <PackagePath>PCLStorage.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
+      <PackagePath>System.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+      <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\xamarin.essentials\1.8.1\lib\uap10.0.16299\Xamarin.Essentials.dll">
+      <PackagePath>Xamarin.Essentials.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\xamarin.forms\5.0.0.2662\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
+      <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\xamarin.forms\5.0.0.2662\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
+      <PackagePath>Xamarin.Forms.Platform.UAP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\xamarin.forms\5.0.0.2662\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
+      <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\xamarin.forms\5.0.0.2662\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
+      <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Todo.dll">
+      <PackagePath>Todo.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+      <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.22621.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+      <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Todo.dll.config">
+      <PackagePath>Todo.dll.config</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\xamarin.forms\5.0.0.2662\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
+      <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.scale-100.png">
+      <PackagePath>Assets\AppList\AppList.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.scale-125.png">
+      <PackagePath>Assets\AppList\AppList.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.scale-150.png">
+      <PackagePath>Assets\AppList\AppList.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.scale-200.png">
+      <PackagePath>Assets\AppList\AppList.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.scale-400.png">
+      <PackagePath>Assets\AppList\AppList.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-16_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-16_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-20_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-20_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-24_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-256_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-256_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-30_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-30_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-32_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-32_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-36_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-36_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-40_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-40_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-48_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-48_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-60_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-60_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-64_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-64_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-72_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-72_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-80_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-80_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\AppList\AppList.targetsize-96_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-96_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Large\Large310x310Logo.scale-100.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Large\Large310x310Logo.scale-125.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Large\Large310x310Logo.scale-150.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Large\Large310x310Logo.scale-200.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Large\Large310x310Logo.scale-400.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Medium\Medium150x150Logo.scale-100.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Medium\Medium150x150Logo.scale-125.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Medium\Medium150x150Logo.scale-150.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Medium\Medium150x150Logo.scale-200.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Medium\Medium150x150Logo.scale-400.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Small\AppList.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.altform-unplated_targetsize-24.png">
+      <PackagePath>Assets\Small\AppList.altform-unplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Small\AppList.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Small\AppList.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Small\AppList.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.scale-100.png">
+      <PackagePath>Assets\Small\AppList.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.scale-125.png">
+      <PackagePath>Assets\Small\AppList.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.scale-150.png">
+      <PackagePath>Assets\Small\AppList.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.scale-200.png">
+      <PackagePath>Assets\Small\AppList.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.scale-400.png">
+      <PackagePath>Assets\Small\AppList.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.targetsize-16.png">
+      <PackagePath>Assets\Small\AppList.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.targetsize-24.png">
+      <PackagePath>Assets\Small\AppList.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.targetsize-256.png">
+      <PackagePath>Assets\Small\AppList.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.targetsize-32.png">
+      <PackagePath>Assets\Small\AppList.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\AppList.targetsize-48.png">
+      <PackagePath>Assets\Small\AppList.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Large310x310Logo.scale-100.png">
+      <PackagePath>Assets\Small\Large310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Large310x310Logo.scale-125.png">
+      <PackagePath>Assets\Small\Large310x310Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Large310x310Logo.scale-150.png">
+      <PackagePath>Assets\Small\Large310x310Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Large310x310Logo.scale-200.png">
+      <PackagePath>Assets\Small\Large310x310Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Large310x310Logo.scale-400.png">
+      <PackagePath>Assets\Small\Large310x310Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Medium150x150Logo.scale-100.png">
+      <PackagePath>Assets\Small\Medium150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Medium150x150Logo.scale-125.png">
+      <PackagePath>Assets\Small\Medium150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Medium150x150Logo.scale-150.png">
+      <PackagePath>Assets\Small\Medium150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Medium150x150Logo.scale-200.png">
+      <PackagePath>Assets\Small\Medium150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Medium150x150Logo.scale-400.png">
+      <PackagePath>Assets\Small\Medium150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Small71x71Logo.scale-100.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Small71x71Logo.scale-125.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Small71x71Logo.scale-150.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Small71x71Logo.scale-200.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Small71x71Logo.scale-400.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\SplashScreen.scale-100.png">
+      <PackagePath>Assets\Small\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\SplashScreen.scale-125.png">
+      <PackagePath>Assets\Small\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\SplashScreen.scale-150.png">
+      <PackagePath>Assets\Small\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\SplashScreen.scale-200.png">
+      <PackagePath>Assets\Small\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\SplashScreen.scale-400.png">
+      <PackagePath>Assets\Small\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\StoreLogo.scale-100.png">
+      <PackagePath>Assets\Small\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\StoreLogo.scale-125.png">
+      <PackagePath>Assets\Small\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\StoreLogo.scale-150.png">
+      <PackagePath>Assets\Small\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\StoreLogo.scale-200.png">
+      <PackagePath>Assets\Small\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\StoreLogo.scale-400.png">
+      <PackagePath>Assets\Small\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Small\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Small\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Small\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Small\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Small\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Small\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\SplashScreen\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\SplashScreen\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\SplashScreen\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\SplashScreen\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\SplashScreen\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Store\StoreLogo.scale-100.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Store\StoreLogo.scale-125.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Store\StoreLogo.scale-150.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Store\StoreLogo.scale-200.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Store\StoreLogo.scale-400.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Wide\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Wide\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Wide\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Wide\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Wide\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\ic_check_mark_gray.png">
+      <PackagePath>Images\ic_check_mark_gray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\ic_done.png">
+      <PackagePath>Images\ic_done.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\ic_add.png">
+      <PackagePath>Images\ic_add.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\ic_check_mark.png">
+      <PackagePath>Images\ic_check_mark.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\icon.png">
+      <PackagePath>Images\icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\login.png">
+      <PackagePath>Images\login.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\logout.png">
+      <PackagePath>Images\logout.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\padlock.png">
+      <PackagePath>Images\padlock.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\register.png">
+      <PackagePath>Images\register.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Images\user.png">
+      <PackagePath>Images\user.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Todo.UWP.xr.xml">
+      <PackagePath>Todo.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.22621.0\\redist\Debug\x86\ucrtbased.dll">
+      <PackagePath>ucrtbased.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.22621.0\Windows.winmd">
+      <PackagePath>WinMetadata\Windows.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+      <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Core\Todo.UWP.exe">
+      <PackagePath>Todo.UWP.exe</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42007.9001.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42007.9001.0</Version>
+      <Architecture>Win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42007.9001.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42007.9001.0</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42007.9001.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\klamc\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.31331.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.31331.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.31331.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.31331.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.31331.1</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.31331.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.31327.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.31327.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.31327.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.31327.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.31327.1</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.31327.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

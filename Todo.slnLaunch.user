@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Todo.UWP\\Todo.UWP.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "TodoRestApi\\TodoRestApi.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

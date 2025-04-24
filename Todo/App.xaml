@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Todo.App">
+	<Application.Resources>
+		<!-- Application resource dictionary -->
+        
+        <ResourceDictionary>
+
+            <Color x:Key="navBarBackgroundColor">#3498db</Color>
+            <Color x:Key="navBarTextColor">white</Color>
+            <Color x:Key="accentColor">#795548</Color>
+            
+            <Style TargetType="SearchBar">
+                <Setter Property="TextColor" Value="{StaticResource accentColor}" />
+            </Style>
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource accentColor}" />
+            </Style>
+
+            <!-- Button Colors -->
+            <Color x:Key="DetailButtonColor">#FFD700</Color>
+            <!-- Yellow -->
+            <Color x:Key="UpdateButtonColor">#007BFF</Color>
+            <!-- Blue -->
+            <Color x:Key="DeleteButtonColor">#FF0000</Color>
+            <!-- Red -->
+
+            <!-- Button Styles -->
+            <Style x:Key="DetailButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource DetailButtonColor}" />
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Padding" Value="10,5"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="UpdateButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource UpdateButtonColor}" />
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Padding" Value="10,5"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="DeleteButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource DeleteButtonColor}" />
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Padding" Value="10,5"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+        </ResourceDictionary>
+        
+	</Application.Resources>
+</Application>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:Todo.Converters"
+             x:Class="Todo.Views.LoginView"
+             BackgroundColor="#2C3E50" Title="{Binding PageTitle}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="30" VerticalOptions="CenterAndExpand">
+
+            <!-- App Title -->
+            <Label Text="Welcome Back" 
+                   FontSize="32" 
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontAttributes="Bold"/>
+
+            <!-- Username Entry -->
+            <Frame HasShadow="False" BorderColor="White" CornerRadius="25" Padding="10" BackgroundColor="Transparent" WidthRequest="300">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image Source="Images/user.png" HeightRequest="20" WidthRequest="20" Margin="5,0"/>
+                    <Entry Placeholder="Username"
+               TextColor="Black"
+               PlaceholderColor="#BDC3C7"
+               x:Name="UsernameEntry"
+               Text="{Binding Username}"
+               HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Password Entry -->
+            <Frame HasShadow="False" BorderColor="White" CornerRadius="25" Padding="10" BackgroundColor="Transparent" WidthRequest="300">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image Source="Images/padlock.png" HeightRequest="20" WidthRequest="20" Margin="5,0"/>
+                    <Entry Placeholder="Password" 
+               IsPassword="True"
+               TextColor="Black"
+               PlaceholderColor="#BDC3C7"
+               x:Name="PasswordEntry"
+               Text="{Binding Password}"
+               HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+
+            <!-- Login Button -->
+            <Button Text="Login"
+                    BackgroundColor="#E74C3C"
+                    TextColor="White"
+                    FontSize="18"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    Command="{Binding LoginCommand}"
+                    IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"/>
+
+            <!-- Sign Up Link -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Don't have an account?" TextColor="White" FontSize="14"/>
+                <Label Text=" Sign Up" TextColor="#E74C3C" FontSize="14" FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
