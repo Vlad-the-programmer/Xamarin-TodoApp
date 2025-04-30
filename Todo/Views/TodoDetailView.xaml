@@ -36,7 +36,7 @@
 
             <!-- Tags Section -->
             <Label Text="Tags:" Style="{StaticResource TitleLabelStyle}"/>
-            <Label Text="{Binding Todo.TagsText}" Style="{StaticResource ValueLabelStyle}" />
+            <Label Text="{Binding TagsText}" Style="{StaticResource ValueLabelStyle}" />
 
             <!-- Created Date Section -->
             <Label Text="Created:" Style="{StaticResource TitleLabelStyle}"/>

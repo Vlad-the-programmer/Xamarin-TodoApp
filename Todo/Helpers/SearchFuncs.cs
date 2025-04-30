@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using TodoModel = Todo.Todo.ApiServices.Todo;
+using TodoModel = Todo.ApiServices.Todo;
 
 namespace Todo.Helpers
 {

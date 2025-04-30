@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 using Todo.Helpers.Session;
 using Todo.Services;
 using Xamarin.Forms;
-using TodoModel = Todo.Todo.ApiServices.Todo;
-using UserModel = Todo.Todo.ApiServices.User;
+using TodoModel = Todo.ApiServices.Todo;
+using UserModel = Todo.ApiServices.User;
 
 namespace Todo.ViewModels
 {

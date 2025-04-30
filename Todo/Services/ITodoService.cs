@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using TodoModel = Todo.Todo.ApiServices.Todo;
+using TodoModel = Todo.ApiServices.Todo;
 
 namespace Todo.Services
 {

@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-04-21T09:43:11.270</Modified>
+      <Modified>2025-04-30T17:05:47.637</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Todo.UWP.exe">
       <PackagePath>entrypoint\Todo.UWP.exe</PackagePath>
-      <Modified>2025-04-21T09:43:09.216</Modified>
+      <Modified>2025-04-30T17:05:45.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\pclstorage\1.0.2\lib\portable-win8+wpa81\PCLStorage.Abstractions.dll">
       <PackagePath>PCLStorage.Abstractions.dll</PackagePath>
@@ -76,11 +76,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Todo.dll">
       <PackagePath>Todo.dll</PackagePath>
-      <Modified>2025-04-21T09:43:02.604</Modified>
+      <Modified>2025-04-30T17:05:39.688</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2023-03-08T06:09:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Portable.DataAnnotations.dll">
+      <PackagePath>Portable.DataAnnotations.dll</PackagePath>
+      <Modified>2015-03-28T22:25:38.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -92,7 +96,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Todo.dll.config">
       <PackagePath>Todo.dll.config</PackagePath>
-      <Modified>2025-04-10T09:51:32.748</Modified>
+      <Modified>2025-04-30T10:27:26.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\xamarin.forms\5.0.0.2662\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
@@ -577,11 +581,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2025-04-21T09:43:09.100</Modified>
+      <Modified>2025-04-30T17:05:45.591</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2025-04-21T09:43:09.100</Modified>
+      <Modified>2025-04-30T17:05:45.591</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.22621.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -597,11 +601,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-04-10T09:53:46.061</Modified>
+      <Modified>2025-04-30T14:22:10.043</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Core\Todo.UWP.exe">
       <PackagePath>Todo.UWP.exe</PackagePath>
-      <Modified>2025-04-21T09:43:11.263</Modified>
+      <Modified>2025-04-30T17:05:47.627</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

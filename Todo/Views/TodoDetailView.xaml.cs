@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using TodoModel = Todo.Todo.ApiServices.Todo;
+using TodoModel = Todo.ApiServices.Todo;
 
 namespace Todo.Views
 {

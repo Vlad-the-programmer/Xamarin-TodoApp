@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 using Todo.Helpers.RequestHelpers;
 using Xamarin.Forms;
 
-using TodoClient = Todo.Todo.ApiServices.Client;
-using TodoModel = Todo.Todo.ApiServices.Todo;
+using TodoClient = Todo.ApiServices.Client;
+using TodoModel = Todo.ApiServices.Todo;
 
 
 [assembly: Dependency(typeof(Todo.Services.TodoService))]
@@ -43,9 +43,21 @@ namespace Todo.Services
             => await _apiClient.TodosPUTAsync(id, todo).HandleRequest();
 
         public async Task<TodoModel> GetItemAsync(int id)
-            => await _apiClient.TodosGETAsync(id);
+        {
+            var found = await _apiClient.TodosGETAsync(id).HandleRequest();
+            if (!found)
+                return null;
+
+            return await _apiClient.TodosGETAsync(id);
+        }
 
         public async Task<List<TodoModel>> SearchTodosAsync()
-            => (List<TodoModel>)await _apiClient.SearchAsync(_searchTerm);
+        {
+            var found = await _apiClient.SearchAsync(_searchTerm).HandleRequest();
+            if (!found)
+                return null;
+
+            return (List<TodoModel>)await _apiClient.SearchAsync(_searchTerm);
+        }
     }
 }

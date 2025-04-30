@@ -56,7 +56,6 @@
     <Compile Include="Helpers\RequestHelpers\RequestHelper.cs" />
     <Compile Include="Helpers\ResponseModels\ErrorResponse.cs" />
     <Compile Include="Helpers\ResponseModels\LoginResult.cs" />
-    <Compile Include="Helpers\ResponseModels\LoginUserModel.cs" />
     <Compile Include="Helpers\ResponseModels\RegistrationResult.cs" />
     <Compile Include="Helpers\SearchFuncs.cs" />
     <Compile Include="Helpers\Session\SessionService.cs" />
@@ -73,7 +72,7 @@
     <Compile Include="Services\IUserDatStore.cs" />
     <Compile Include="Services\SecureStorageTokenStore.cs" />
     <Compile Include="Services\UserDataStore.cs" />
-    <Compile Include="Todo\ApiServices\TodoApiClient.cs" />
+    <Compile Include="ApiServices\TodoApiClient.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\DetailTodoViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />

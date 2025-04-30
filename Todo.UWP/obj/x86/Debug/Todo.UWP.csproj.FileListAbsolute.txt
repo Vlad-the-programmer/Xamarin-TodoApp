@@ -131,3 +131,8 @@ C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Xamarin.Forms.Core.p
 C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.pdb
 C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\klamc\source\repos\App1\App\Todo.UWP\obj\x86\Debug\Microsoft.UI.Xaml.pri.xml
+C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Portable.DataAnnotations.dll
+C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Portable.DataAnnotations.pdb
+C:\Users\klamc\source\repos\App1\App\Todo.UWP\obj\x86\Debug\Portable.DataAnnotations\en\System.ComponentModel.DataAnnotations.Resources.DataAnnotationsResources.resw
+C:\Users\klamc\source\repos\App1\App\Todo.UWP\obj\x86\Debug\resources.en.resfiles
+C:\Users\klamc\source\repos\App1\App\Todo.UWP\obj\x86\Debug\resources.en.resfiles.intermediate

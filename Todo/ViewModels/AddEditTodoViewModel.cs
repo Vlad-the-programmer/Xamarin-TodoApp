@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using Xamarin.Forms;
-using TagModel = Todo.Todo.ApiServices.Tag;
-using TodoModel = Todo.Todo.ApiServices.Todo;
-using TodoTagModel = Todo.Todo.ApiServices.TodoTag;
+using TagModel = Todo.ApiServices.Tag;
+using TodoModel = Todo.ApiServices.Todo;
+using TodoTagModel = Todo.ApiServices.TodoTag;
 
 namespace Todo.ViewModels
 {

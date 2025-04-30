@@ -2,7 +2,7 @@
 {
     public class Constants
     {
-        public const string BASE_URL = "https://localhost:7044/api/";
+        public const string BASE_URL = "https://localhost:7044/";
         public const string TodosEndpoint = "todos";
         public const string UsersEndpoints = "users";
         public const string UsersLoginEndpoints = UsersEndpoints + "/login";

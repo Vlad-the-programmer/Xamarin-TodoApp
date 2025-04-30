@@ -26,14 +26,13 @@ namespace TodoRestApi.Controllers
 
         // GET: api/Users
         [HttpGet]
-        public async Task<IActionResult> GetUsers()
+        public async Task<ActionResult<IEnumerable<Models.User>>> GetUsers()
         {
             var users = await _context.Users
                 .Include(u => u.Todos)
                     .ThenInclude(t => t.TodoTags)
-                .Select(u => new { u.Id, u.Username, u.Email })
                 .ToListAsync();
-            return Ok(users);
+            return users.ToList();
         }
 
         // POST: api/Users/register
@@ -61,7 +60,7 @@ namespace TodoRestApi.Controllers
 
         // POST: api/Users/login
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] UserLoginDto credentials)
+        public async Task<ActionResult<LoginResult>> Login([FromBody] UserLoginDto credentials)
         {
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.Username == credentials.Username);
@@ -79,12 +78,13 @@ namespace TodoRestApi.Controllers
             user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(7); // Refresh token valid for 7 days
             await _context.SaveChangesAsync();
 
-            return Ok(new
+            return new LoginResult
             {
                 Token = token,
                 RefreshToken = refreshToken,
-                User = new { user.Id, user.Username, user.Email }
-            });
+                User = user,
+                ExpiresAt = user.RefreshTokenExpiry.GetValueOrDefault()
+            };
         }
 
         // POST: api/Users/refresh-token
@@ -117,7 +117,7 @@ namespace TodoRestApi.Controllers
 
         // GET: api/Users/{userId}/todos
         [HttpGet("{userId}/todos")]
-        public async Task<IActionResult> GetUserTodos(int userId)
+        public async Task<ActionResult<ICollection<Models.Todo>>> GetUserTodos(int userId)
         {
             var user = await _context.Users
                 .Include(u => u.Todos)
@@ -129,11 +129,11 @@ namespace TodoRestApi.Controllers
                 return NotFound("User not found.");
             }
 
-            return Ok(user.Todos);
+            return user.Todos.ToList();
         }
 
         [HttpGet("{username}")]
-        public async Task<IActionResult> GetUserBy(string username)
+        public async Task<ActionResult<Models.User>> GetUserBy(string username)
         {
             var user = await _context.Users
                 .Include(u => u.Todos)
@@ -145,7 +145,7 @@ namespace TodoRestApi.Controllers
                 return NotFound("User not found.");
             }
 
-            return Ok(new { user.Id, user.Username, user.Email, user.Todos });
+            return user;
         }
 
         private string GenerateJwtToken(User user)

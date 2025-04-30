@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Todo.Helpers;
 using Todo.Helpers.Session;
 using Todo.Services;
 using Todo.Views;
 using Xamarin.Forms;
-using TodoModel = Todo.Todo.ApiServices.Todo;
+using TodoModel = Todo.ApiServices.Todo;
 
 namespace Todo.ViewModels
 {
@@ -27,6 +28,10 @@ namespace Todo.ViewModels
             set => SetProperty(ref _todo, value);
         }
 
+        public string TagsText => Todo.TodoTags != null && Todo.TodoTags.Any()
+        ? string.Join(", ", Todo.TodoTags.Select(t => t.Tag.Name))
+        : "No Tags";
+
         private int _todoId;
         public int TodoId
         {
@@ -34,7 +39,7 @@ namespace Todo.ViewModels
             set
             {
                 _todoId = value;
-                LoadTodo();
+                LoadTodo().GetAwaiter().GetResult();
             }
         }
 
@@ -87,9 +92,9 @@ namespace Todo.ViewModels
             CloseCommand = new Command(async () => await navigation.PopAsync());
         }
 
-        private void LoadTodo()
+        private async Task LoadTodo()
         {
-            Todo = SessionService.Instance.UserTodos
+            Todo = (await GetUserTodos())
                 .FirstOrDefault(t => t.Id == _todoId);
 
         }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Todo.Helpers.ResponseModels;
 using Todo.Helpers.Session;
 using Todo.ViewModels;
 using Todo.Views;
 using Xamarin.Forms;
+
+using LoginDto = Todo.ApiServices.UserLoginDto;
 
 public class LoginViewModel : BaseViewModel
 {
@@ -56,7 +57,9 @@ public class LoginViewModel : BaseViewModel
 
         try
         {
-            bool isValidUser = await UserDataStore.Login(new LoginUserModel { Username = Username, Password = Password });
+            bool isValidUser = await UserDataStore.Login(new
+            LoginDto
+            { Username = Username, Password = Password });
 
             if (isValidUser)
             {

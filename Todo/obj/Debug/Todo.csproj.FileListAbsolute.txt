@@ -36,3 +36,5 @@ C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\klamc\source\repos\App1\App\Todo\obj\Debug\XamlC.stamp
 C:\Users\klamc\source\repos\App1\App\Todo\obj\Debug\Todo.csproj.Up2Date
+C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Portable.DataAnnotations.dll
+C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Portable.DataAnnotations.pdb

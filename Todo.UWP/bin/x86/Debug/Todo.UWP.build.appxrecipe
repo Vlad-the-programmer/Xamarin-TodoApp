@@ -61,6 +61,9 @@
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Portable.DataAnnotations.dll">
+      <PackagePath>Portable.DataAnnotations.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>

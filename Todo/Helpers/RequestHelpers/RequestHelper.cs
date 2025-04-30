@@ -15,7 +15,7 @@ namespace Todo.Helpers.RequestHelpers
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message);
+                Debug.WriteLine($"Request error: {ex.Message}");
                 return false;
             }
         }

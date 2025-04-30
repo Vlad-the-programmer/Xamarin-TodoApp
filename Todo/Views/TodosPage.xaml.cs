@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using Todo.Helpers;
-using Todo.Services;
 using Todo.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
+using TodoModel = Todo.ApiServices.Todo;
 
 namespace Todo.Views
 {
@@ -57,7 +56,7 @@ namespace Todo.Views
         private async void ItemTapped(object sender, ItemTappedEventArgs e)
         {
             //TodosListView.SelectedItem = null;
-            var tappedItem = (sender as Element)?.BindingContext as Models.Todo;
+            var tappedItem = (sender as Element)?.BindingContext as TodoModel;
             if (tappedItem == null) return;
 
             _viewModel.ItemTapped(tappedItem);
@@ -70,7 +69,7 @@ namespace Todo.Views
 
         private async void OnTodoTapped(object sender, EventArgs e)
         {
-            if (sender is StackLayout layout && layout.BindingContext is Models.Todo todo)
+            if (sender is StackLayout layout && layout.BindingContext is TodoModel todo)
             {
                 _viewModel.ItemTapped(todo);
 

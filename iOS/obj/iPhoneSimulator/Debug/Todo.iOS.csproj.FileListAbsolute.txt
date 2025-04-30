@@ -78,3 +78,5 @@ C:\Users\klamc\source\repos\App1\App\iOS\bin\iPhoneSimulator\Debug\Xamarin.Essen
 C:\Users\klamc\source\repos\App1\App\iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.xml
 C:\Users\klamc\source\repos\App1\App\iOS\bin\iPhoneSimulator\Debug\System.Numerics.Vectors.xml
 C:\Users\klamc\source\repos\App1\App\iOS\bin\iPhoneSimulator\Debug\System.ValueTuple.xml
+C:\Users\klamc\source\repos\App1\App\iOS\bin\iPhoneSimulator\Debug\Portable.DataAnnotations.dll
+C:\Users\klamc\source\repos\App1\App\iOS\bin\iPhoneSimulator\Debug\Portable.DataAnnotations.pdb

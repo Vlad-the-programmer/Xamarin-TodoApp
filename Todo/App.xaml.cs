@@ -1,28 +1,30 @@
-﻿using System.Net.Http.Headers;
+﻿using System.Net.Http;
+using System.Net.Http.Headers;
 using Todo.Helpers.Session;
 using Todo.Services;
 using Todo.Views;
 using Xamarin.Forms;
 
-using TodoClient = Todo.Todo.ApiServices.Client;
+using TodoClient = Todo.ApiServices.Client;
 
 namespace Todo
 {
     public partial class App : Application
     {
+        private readonly HttpClient _httpClient;
+        private readonly IAuthTokenStore _tokenStore;
         public App()
         {
             InitializeComponent();
 
             DependencyService.Register<IAuthTokenStore, SecureStorageTokenStore>();
-            //if (DependencyService.Get<IHttpClientService>() == null)
-            //{
-            //    DependencyService.Register<IHttpClientService, HttpClientService>();
-            //}
+            _tokenStore = DependencyService.Get<IAuthTokenStore>();
 
-            var client = DependencyService.Get<IHttpClientService>().GetClient();
+            DependencyService.Register<IHttpClientService, HttpClientService>();
 
-            DependencyService.RegisterSingleton(new TodoClient(Constants.Constants.BASE_URL, client));
+            _httpClient = DependencyService.Get<IHttpClientService>().GetClient();
+
+            DependencyService.RegisterSingleton(new TodoClient(Constants.Constants.BASE_URL, _httpClient));
 
             DependencyService.Register<TodoService>();
             DependencyService.Register<UserDataStore>();
@@ -56,14 +58,12 @@ namespace Todo
         protected override async void OnStart()
         {
             LogoutUser();
-            var tokenStore = DependencyService.Get<Services.IAuthTokenStore>();
-            var token = await tokenStore.GetToken();
+            var token = await _tokenStore.GetToken();
 
             if (!string.IsNullOrEmpty(token))
             {
 
-                var httpClient = DependencyService.Get<IHttpClientService>().GetClient();
-                httpClient.DefaultRequestHeaders.Authorization =
+                _httpClient.DefaultRequestHeaders.Authorization =
                     new AuthenticationHeaderValue("Bearer", token);
             }
         }
@@ -83,12 +83,10 @@ namespace Todo
         private void LogoutUser()
         {
             SessionService.Instance.Logout();
-            var tokenStore = DependencyService.Get<IAuthTokenStore>();
-            tokenStore.ClearToken();
+            _tokenStore.ClearToken();
 
             // Also clear from current HttpClient
-            var httpClient = DependencyService.Get<IHttpClientService>().GetClient();
-            httpClient.DefaultRequestHeaders.Authorization = null;
+            _httpClient.DefaultRequestHeaders.Authorization = null;
 
         }
     }

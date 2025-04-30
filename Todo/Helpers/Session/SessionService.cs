@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using TodoModel = Todo.Todo.ApiServices.Todo;
-using UserModel = Todo.Todo.ApiServices.User;
+using TodoModel = Todo.ApiServices.Todo;
+using UserModel = Todo.ApiServices.User;
 
 namespace Todo.Helpers.Session
 {

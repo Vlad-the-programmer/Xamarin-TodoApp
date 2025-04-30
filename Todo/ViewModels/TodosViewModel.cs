@@ -7,7 +7,7 @@ using Todo.Services;
 using Todo.Views;
 using Xamarin.Forms;
 
-using TodoModel = Todo.Todo.ApiServices.Todo;
+using TodoModel = Todo.ApiServices.Todo;
 
 namespace Todo.ViewModels
 {
