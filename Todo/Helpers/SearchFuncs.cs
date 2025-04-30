@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Todo.Models;
+
+using TodoModel = Todo.Todo.ApiServices.Todo;
 
 namespace Todo.Helpers
 {
     internal class SearchFuncs
     {
-        public static void Search(string searchTerm, ref string _searchTerm, IList<Models.Todo> AllTodos, IList<Models.Todo> Todos)
+        public static void Search(string searchTerm, ref string _searchTerm, IList<TodoModel> AllTodos, IList<TodoModel> Todos)
         {
             _searchTerm = searchTerm;
-            IList<Models.Todo> foundTodos;
+            IList<TodoModel> foundTodos;
             if (!String.IsNullOrWhiteSpace(searchTerm))
-                foundTodos = AllTodos.Where(todo => todo.Text.ToLower().Contains(searchTerm.ToLower())).ToList();
+                foundTodos = AllTodos.Where(todo => todo.Content.ToLower().Contains(searchTerm.ToLower())).ToList();
             else
                 foundTodos = AllTodos;
 

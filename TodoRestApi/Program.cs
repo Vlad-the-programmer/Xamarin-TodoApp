@@ -17,6 +17,7 @@ builder.Services.AddControllers()
 // Swagger/OpenAPI for documentation
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddOpenApiDocument();
 
 // Add DbContext
 builder.Services.AddDbContext<TodosDbContext>(options =>
@@ -58,7 +59,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo API V1");
+    });
 }
 else
 {

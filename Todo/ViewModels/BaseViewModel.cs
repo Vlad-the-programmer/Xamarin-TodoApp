@@ -5,9 +5,10 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Todo.Helpers.Session;
-using Todo.Models;
 using Todo.Services;
 using Xamarin.Forms;
+using TodoModel = Todo.Todo.ApiServices.Todo;
+using UserModel = Todo.Todo.ApiServices.User;
 
 namespace Todo.ViewModels
 {
@@ -18,8 +19,8 @@ namespace Todo.ViewModels
 
         #region Global Fields
 
-        private User _currentUser;
-        public User CurrentUser
+        private UserModel _currentUser;
+        public UserModel CurrentUser
         {
             get => _currentUser;
             set
@@ -30,18 +31,18 @@ namespace Todo.ViewModels
             }
         }
 
-        public bool IsUserLoggedIn => CurrentUser != null && CurrentUser.IsLoggedIn;
+        public bool IsUserLoggedIn => CurrentUser != null && SessionService.Instance.IsCurrentUserLoggedIn;
         public bool IsUserLoggedOut => !IsUserLoggedIn;
 
-        private IList<Models.Todo> _usersTodos;
-        public IList<Models.Todo> UsersTodos
-        {
-            get => _usersTodos;
-            set
-            {
-                SetProperty(ref _usersTodos, value);
-            }
-        }
+        //private IList<TodoModel> _usersTodos;
+        //public IList<TodoModel> UsersTodos
+        //{
+        //    get => _usersTodos;
+        //    set
+        //    {
+        //        SetProperty(ref _usersTodos, value);
+        //    }
+        //}
 
         bool isBusy = false;
         public bool IsBusy
@@ -68,12 +69,12 @@ namespace Todo.ViewModels
         public BaseViewModel()
         {
             CurrentUser = SessionService.Instance.CurrentUser;
-            UsersTodos = SessionService.Instance.UserTodos;
+            //UsersTodos = SessionService.Instance.UserTodos;
 
             Debug.WriteLine("LoggedIn: " + IsUserLoggedIn);
         }
 
-        public async Task<List<Models.Todo>> GetUserTodos()
+        public async Task<List<TodoModel>> GetUserTodos()
         {
             IsRefreshing = true;
             try

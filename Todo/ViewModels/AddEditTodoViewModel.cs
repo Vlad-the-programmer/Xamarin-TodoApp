@@ -1,7 +1,9 @@
 ﻿using System;
-using Todo.Helpers.Session;
-using Todo.Services;
+using System.Linq;
 using Xamarin.Forms;
+using TagModel = Todo.Todo.ApiServices.Tag;
+using TodoModel = Todo.Todo.ApiServices.Todo;
+using TodoTagModel = Todo.Todo.ApiServices.TodoTag;
 
 namespace Todo.ViewModels
 {
@@ -10,14 +12,14 @@ namespace Todo.ViewModels
         #region Fields
         private INavigation _navigation;
 
-        private Models.Todo _todo;
+        private TodoModel _todo;
         private string _tags;
         private string _text;
         private bool _isDone;
         #endregion
 
         #region Properties
-        public Models.Todo Todo
+        public TodoModel Todo
         {
             get => _todo;
             set => SetProperty(ref _todo, value);
@@ -29,7 +31,7 @@ namespace Todo.ViewModels
             set
             {
                 if (SetProperty(ref _text, value))
-                    Todo.Text = value; // Update Todo when changed
+                    Todo.Content = value; // Update Todo when changed
             }
         }
 
@@ -48,20 +50,25 @@ namespace Todo.ViewModels
             get => _tags;
             set => SetProperty(ref _tags, value);
         }
+
+        public string TagsText => Todo.TodoTags != null && Todo.TodoTags.Any()
+        ? string.Join(", ", Todo.TodoTags.Select(t => t.Tag.Name))
+        : "No Tags";
+
         #endregion
 
-        public AddEditTodoViewModel(INavigation navigation, Models.Todo todo = null)
+        public AddEditTodoViewModel(INavigation navigation, TodoModel todo = null)
         {
             PageTitle = "Add Edit Todo Page";
             _navigation = navigation;
-            Todo = todo ?? new Models.Todo();
+            Todo = todo ?? new TodoModel();
 
             // Assign existing values if editing
             if (todo != null)
             {
-                Text = todo.Text;
+                Text = todo.Content;
                 IsDone = todo.IsDone;
-                Tags = todo.TagsText;
+                Tags = TagsText;
             }
         }
 
@@ -76,9 +83,9 @@ namespace Todo.ViewModels
                 Todo.TodoTags.Clear(); // Prevent duplicate tags
                 if (!string.IsNullOrWhiteSpace(Tags))
                 {
-                    Todo.TodoTags.Add(new Models.TodoTag
+                    Todo.TodoTags.Add(new TodoTagModel
                     {
-                        Tag = new Models.Tag { Name = Tags },
+                        Tag = new TagModel { Name = Tags },
                         TodoId = Todo.Id
                     });
                 }
@@ -90,23 +97,23 @@ namespace Todo.ViewModels
             }
             else
             {
-                existingTodo.Text = Text;
+                existingTodo.Content = Text;
                 existingTodo.IsDone = IsDone;
                 existingTodo.TodoTags.Clear();
                 if (!string.IsNullOrWhiteSpace(Tags))
                 {
-                    existingTodo.TodoTags.Add(new Models.TodoTag
+                    existingTodo.TodoTags.Add(new TodoTagModel
                     {
-                        Tag = new Models.Tag { Name = Tags },
+                        Tag = new TagModel { Name = Tags },
                         TodoId = existingTodo.Id
                     });
                 }
                 existingTodo.UpdatedAt = DateTime.Now;
-                await DataStore.UpdateItemAsync(existingTodo);
+                await DataStore.UpdateItemAsync(existingTodo.Id, existingTodo);
             }
 
-            TodoService.Todos.Clear();
-            SessionService.Instance.UserTodos = await GetUserTodos();
+            //TodoService.Todos.Clear();
+            //SessionService.Instance.UserTodos = await GetUserTodos();
 
             //foreach(var todo in SessionService.Instance.UserTodos)
             //    TodoService.Todos.Add(todo);

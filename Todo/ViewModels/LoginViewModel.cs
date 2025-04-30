@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Todo.Helpers.ResponseModels;
 using Todo.Helpers.Session;
 using Todo.ViewModels;
 using Todo.Views;
@@ -55,12 +56,12 @@ public class LoginViewModel : BaseViewModel
 
         try
         {
-            bool isValidUser = await UserDataStore.Login(Username, Password);
+            bool isValidUser = await UserDataStore.Login(new LoginUserModel { Username = Username, Password = Password });
 
             if (isValidUser)
             {
                 CurrentUser = await UserDataStore.GetUserBy(Username);
-                CurrentUser.IsLoggedIn = true;
+                SessionService.Instance.IsCurrentUserLoggedIn = true;
 
                 SessionService.Instance.CurrentUser = CurrentUser;
 

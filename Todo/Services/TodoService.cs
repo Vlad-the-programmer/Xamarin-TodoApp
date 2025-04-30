@@ -1,92 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Threading.Tasks;
-using Todo.ApiServices;
+using Todo.Helpers.RequestHelpers;
 using Xamarin.Forms;
+
+using TodoClient = Todo.Todo.ApiServices.Client;
+using TodoModel = Todo.Todo.ApiServices.Todo;
+
 
 [assembly: Dependency(typeof(Todo.Services.TodoService))]
 namespace Todo.Services
 {
     public class TodoService : ITodoService
     {
-        private readonly ITodoApiService _todoApiService;
-        public static ObservableCollection<Models.Todo> Todos = new ObservableCollection<Models.Todo>();
-        public static IList<Models.Todo> AllTodos = new List<Models.Todo>();
+        public static ObservableCollection<TodoModel> Todos = new ObservableCollection<TodoModel>();
+        public static List<TodoModel> AllTodos = new List<TodoModel>();
         private static string _searchTerm;
+        private readonly TodoClient _apiClient;
 
         public string SearchTerm { get { return _searchTerm; } set => _searchTerm = value; }
 
 
+
         public TodoService()
         {
-            _todoApiService = new TodoApiService();
+            _apiClient = DependencyService.Get<TodoClient>();
+            AllTodos = (List<TodoModel>)_apiClient.TodosAllAsync().GetAwaiter().GetResult();
         }
 
-        public async Task<IEnumerable<Models.Todo>> GetItemsAsync(bool forceRefresh = false)
-        {
-            try
-            {
-                return await _todoApiService.GetItemsAsync(forceRefresh);
-            }
-            catch (Exception Ex)
-            {
-                Debug.WriteLine($"Error: {Ex.Message}");
-                return new List<Models.Todo>();
-            }
-        }
+        public async Task<IEnumerable<TodoModel>> GetItemsAsync(bool forceRefresh = false)
+            => AllTodos;
 
 
-
-        public async Task<bool> AddItemAsync(Models.Todo todo)
-        {
-            try
-            {
-                return await _todoApiService.AddItemAsync(todo);
-            }
-            catch (Exception Ex)
-            {
-                Debug.WriteLine($"Error: {Ex.Message}");
-                return await Task.FromResult(false);
-            }
-        }
+        public async Task<bool> AddItemAsync(TodoModel todo)
+            => await _apiClient.TodosPOSTAsync(todo).HandleRequest();
 
 
-        public async Task<bool> DeleteItemAsync(Models.Todo todo)
-        {
-            try
-            {
-                return await _todoApiService.DeleteItemAsync(todo);
-            }
-            catch (Exception Ex)
-            {
-                Debug.WriteLine($"Error: {Ex.Message}");
-                return await Task.FromResult(false);
-            }
-        }
+        public async Task<bool> DeleteItemAsync(int id)
+            => await _apiClient.TodosDELETEAsync(id).HandleRequest();
 
-        public async Task<bool> UpdateItemAsync(Models.Todo todo)
-        {
-            try
-            {
-                return await _todoApiService.UpdateItemAsync(todo);
-            }
-            catch (Exception Ex)
-            {
-                Debug.WriteLine($"Error: {Ex.Message}");
-                return await Task.FromResult(false);
-            }
-        }
+        public async Task<bool> UpdateItemAsync(int id, TodoModel todo)
+            => await _apiClient.TodosPUTAsync(id, todo).HandleRequest();
 
-        public async Task<Models.Todo> GetItemAsync(int id)
-        {
-            return await _todoApiService.GetItemAsync(id);
-        }
+        public async Task<TodoModel> GetItemAsync(int id)
+            => await _apiClient.TodosGETAsync(id);
 
-        public async Task<List<Models.Todo>> SearchTodosAsync()
-        {
-            return await _todoApiService.SearchTodosAsync(SearchTerm);
-        }
+        public async Task<List<TodoModel>> SearchTodosAsync()
+            => (List<TodoModel>)await _apiClient.SearchAsync(_searchTerm);
     }
 }

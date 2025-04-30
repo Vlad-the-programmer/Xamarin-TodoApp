@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TodoRestApi.Models;
 
@@ -22,6 +20,7 @@ public partial class Todo
     [Column("title")]
     [StringLength(100)]
     public string? Title { get; set; }
+    public bool IsDone { get; set; }
 
     [Column("created_at")]
     public DateTime? CreatedAt { get; set; }

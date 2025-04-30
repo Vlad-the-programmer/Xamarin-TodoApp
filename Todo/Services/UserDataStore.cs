@@ -1,16 +1,20 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
-using Todo.ApiServices;
-using Todo.Helpers.Exception;
+using Todo.Helpers.RequestHelpers;
+using Todo.Helpers.ResponseModels;
 using Todo.Models;
+using Xamarin.Forms;
+using TodoClient = Todo.Todo.ApiServices.Client;
+using TodoModel = Todo.Todo.ApiServices.Todo;
+using UserModel = Todo.Todo.ApiServices.User;
 
 namespace Todo.Services
 {
     class UserDataStore : IUserDatStore
     {
-        private readonly IUsersApiService _usersApiService;
+        private readonly TodoClient _apiClient;
 
         private static ObservableCollection<User> users;
 
@@ -18,63 +22,20 @@ namespace Todo.Services
         public UserDataStore()
         {
             //users = (ObservableCollection<User>)GetItemsAsync(true).GetAwaiter().GetResult();
-            _usersApiService = new UsersApiService();
+            _apiClient = DependencyService.Get<TodoClient>();
         }
 
 
+        public async Task<bool> Register(UserModel user)
+            => await _apiClient.RegisterAsync(user).HandleRequest();
 
-        public async Task<bool> Register(User user)
-        {
-            try
-            {
-                await _usersApiService.RegisterAsync(user);
-                return true;
-            }
-            catch (ApiException Ex)
-            {
-                Debug.WriteLine($"Error: {Ex.Message} {Ex.InnerException.Message}");
-                return false;
-            }
-        }
+        public async Task<bool> Login(LoginUserModel user)
+            => await _apiClient.LoginAsync(user).HandleRequest();
 
-        public async Task<bool> Login(string login, string password)
-        {
-            try
-            {
-                await _usersApiService.LoginAsync(login, password);
-                return true;
-            }
-            catch (ApiException Ex)
-            {
-                Debug.WriteLine($"Error: {Ex.Message}");
-                return false;
-            }
-        }
+        public async Task<List<TodoModel>> GetUserTodos(int userId)
+            => (List<TodoModel>)TodoService.AllTodos.Where(t => t.UserId == userId);
 
-        public async Task<List<Models.Todo>> GetUserTodos(int userId)
-        {
-            try
-            {
-                return await _usersApiService.GetUserTodosAsync(userId);
-            }
-            catch (ApiException Ex)
-            {
-                Debug.WriteLine($"Error: {Ex.Message}");
-                return await Task.FromResult(new List<Models.Todo>());
-            }
-        }
-
-        public async Task<User> GetUserBy(string username)
-        {
-            try
-            {
-                return await _usersApiService.GetUserAsync(username);
-            }
-            catch (ApiException Ex)
-            {
-                Debug.WriteLine($"Error: {Ex.Message}");
-                return await Task.FromResult(new Models.User());
-            }
-        }
+        public async Task<UserModel> GetUserBy(string username)
+            => new UserModel();
     }
 }

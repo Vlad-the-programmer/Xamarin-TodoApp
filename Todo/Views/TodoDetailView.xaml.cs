@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Todo.ViewModels;
+﻿using Todo.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
+using TodoModel = Todo.Todo.ApiServices.Todo;
 
 namespace Todo.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TodoDetailView : ContentPage
     {
-        public TodoDetailView(Models.Todo todo = null)
+        public TodoDetailView(TodoModel todo = null)
         {
             InitializeComponent();
             BindingContext = new DetailTodoViewModel(todo, Navigation);

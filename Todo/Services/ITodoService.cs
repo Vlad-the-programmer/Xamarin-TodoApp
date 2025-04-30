@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
+using TodoModel = Todo.Todo.ApiServices.Todo;
+
 namespace Todo.Services
 {
-    public interface ITodoService : IDataStore<Models.Todo>
+    public interface ITodoService : IDataStore<TodoModel>
     {
-        Task<List<Models.Todo>> SearchTodosAsync();
+        Task<List<TodoModel>> SearchTodosAsync();
     }
 }

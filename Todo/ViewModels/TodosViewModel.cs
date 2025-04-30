@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Todo.Helpers;
@@ -8,6 +6,8 @@ using Todo.Helpers.Session;
 using Todo.Services;
 using Todo.Views;
 using Xamarin.Forms;
+
+using TodoModel = Todo.Todo.ApiServices.Todo;
 
 namespace Todo.ViewModels
 {
@@ -18,9 +18,9 @@ namespace Todo.ViewModels
         #endregion
 
         #region Properties
-        public ObservableCollection<Models.Todo> Todos
+        public ObservableCollection<TodoModel> Todos
         {
-            get => new ObservableCollection<Models.Todo>(SessionService.Instance.UserTodos);
+            get => new ObservableCollection<TodoModel>(SessionService.Instance.UserTodos);
             set => SetProperty(ref TodoService.Todos, value);
         }
 
@@ -32,17 +32,15 @@ namespace Todo.ViewModels
         {
             PageTitle = "Todos";
 
-            Todos = new ObservableCollection<Models.Todo>(
-                (SessionService.Instance.UserTodos != null && SessionService.Instance.UserTodos.Any())
-                ? SessionService.Instance.UserTodos.ToList()
-                : new List<Models.Todo>()
+            Todos = new ObservableCollection<TodoModel>(
+               UserDataStore.GetUserTodos(CurrentUser.Id).GetAwaiter().GetResult()
             );
         }
 
         #region Commands
         public ICommand LoadItemsCommand => new Command(async () => await GetUserTodos());
 
-        public ICommand DetailCommand => new Command<Models.Todo>(async (todo) =>
+        public ICommand DetailCommand => new Command<TodoModel>(async (todo) =>
         {
             if (todo != null)
             {
@@ -61,7 +59,7 @@ namespace Todo.ViewModels
             });
         }
 
-        public ICommand UpdateCommand => new Command<Models.Todo>(async (todo) =>
+        public ICommand UpdateCommand => new Command<TodoModel>(async (todo) =>
         {
             if (todo != null)
             {
@@ -73,16 +71,16 @@ namespace Todo.ViewModels
             }
         });
 
-        public ICommand RemoveCommand => new Command<Models.Todo>(async (todo) =>
+        public ICommand RemoveCommand => new Command<TodoModel>(async (todo) =>
         {
             if (todo != null)
             {
                 if (todo.UserId != CurrentUser.Id) return;
                 var deleteItem = await Application.Current.MainPage.DisplayAlert(
-                    "Remove", $"Remove the todo {todo.Text}", "OK", "Never mind");
+                    "Remove", $"Remove the todo {todo.Content}", "OK", "Never mind");
                 if (deleteItem)
                 {
-                    await DataStore.DeleteItemAsync(todo);
+                    await DataStore.DeleteItemAsync(todo.Id);
                     // Refresh the Todos list
                     //SessionService.Instance.UserTodos = await GetUserTodos();
                     //Todos = SessionService.Instance.UserTodos;
@@ -137,25 +135,24 @@ namespace Todo.ViewModels
         {
             if (CurrentUser != null)
             {
-                CurrentUser.IsLoggedIn = false;
                 CurrentUser = null;
                 OnPropertyChanged(nameof(IsUserLoggedIn));
                 OnPropertyChanged(nameof(IsUserLoggedOut));
                 OnPropertyChanged(nameof(CurrentUser));
 
                 Todos.Clear(); // Clear todos on logout
-                UsersTodos.Clear();
+                //UsersTodos.Clear();
                 SessionService.Instance.Logout();
                 await Application.Current.MainPage.Navigation.PushAsync(new LoginView());
             }
         }
 
-        public async void ItemTapped(Models.Todo todo)
+        public async void ItemTapped(TodoModel todo)
         {
             todo.IsDone = !todo.IsDone;
 
-            await DataStore.UpdateItemAsync(todo); // Save to data store
-            await DbFileHandler.SaveTodos((IList<Models.Todo>)await DataStore.GetItemsAsync()); // Persist to file/db
+            await DataStore.UpdateItemAsync(todo.Id, todo); // Save to data store
+            //await DbFileHandler.SaveTodos((IList<TodoModel>)await DataStore.GetItemsAsync()); // Persist to file/db
         }
 
 

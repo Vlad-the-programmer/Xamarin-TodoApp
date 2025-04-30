@@ -1,9 +1,10 @@
 ﻿using System.Net.Http.Headers;
-using Todo.ApiServices;
 using Todo.Helpers.Session;
 using Todo.Services;
 using Todo.Views;
 using Xamarin.Forms;
+
+using TodoClient = Todo.Todo.ApiServices.Client;
 
 namespace Todo
 {
@@ -14,13 +15,14 @@ namespace Todo
             InitializeComponent();
 
             DependencyService.Register<IAuthTokenStore, SecureStorageTokenStore>();
-            if (DependencyService.Get<IHttpClientService>() == null)
-            {
-                DependencyService.Register<IHttpClientService, HttpClientService>();
-            }
+            //if (DependencyService.Get<IHttpClientService>() == null)
+            //{
+            //    DependencyService.Register<IHttpClientService, HttpClientService>();
+            //}
 
-            DependencyService.Register<TodoApiService>();
-            DependencyService.Register<UsersApiService>();
+            var client = DependencyService.Get<IHttpClientService>().GetClient();
+
+            DependencyService.RegisterSingleton(new TodoClient(Constants.Constants.BASE_URL, client));
 
             DependencyService.Register<TodoService>();
             DependencyService.Register<UserDataStore>();
@@ -31,7 +33,7 @@ namespace Todo
             Routing.RegisterRoute(nameof(LoginView), typeof(LoginView));
             Routing.RegisterRoute(nameof(TodosPage), typeof(TodosPage));
 
-            if (SessionService.Instance.CurrentUser != null && SessionService.Instance.CurrentUser.IsLoggedIn)
+            if (SessionService.Instance.CurrentUser != null && SessionService.Instance.IsCurrentUserLoggedIn)
             {
                 // User is logged in, go to TodosPage
                 MainPage = new NavigationPage(new TodosPage())

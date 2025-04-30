@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Todo.Helpers;
-using Todo.Models;
 using Todo.Views;
 using Xamarin.Forms;
+using TodoModel = Todo.Todo.ApiServices.Todo;
+using UserModel = Todo.Todo.ApiServices.User;
 
 namespace Todo.ViewModels
 {
@@ -53,12 +54,13 @@ namespace Todo.ViewModels
         private async Task OnRegister()
         {
 
-            var newUser = new User
+            var newUser = new UserModel
             {
                 Username = Username,
                 Password = Password,
                 Email = Email,
                 CreatedAt = DateTime.Now,
+                Todos = new System.Collections.Generic.List<TodoModel>()
             };
 
             var IsSuccess = await UserDataStore.Register(newUser);

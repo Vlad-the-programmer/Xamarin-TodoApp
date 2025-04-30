@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Todo.Helpers;
 using Todo.Helpers.Session;
-using Todo.Models;
 using Todo.Services;
 using Todo.Views;
 using Xamarin.Forms;
+using TodoModel = Todo.Todo.ApiServices.Todo;
 
 namespace Todo.ViewModels
 {
@@ -20,11 +17,11 @@ namespace Todo.ViewModels
         #region Fields
         private INavigation _navigation;
 
-        private Models.Todo _todo;
+        private TodoModel _todo;
         #endregion
 
         #region Properties
-        public Models.Todo Todo
+        public TodoModel Todo
         {
             get => _todo;
             set => SetProperty(ref _todo, value);
@@ -65,10 +62,10 @@ namespace Todo.ViewModels
                 if (Todo.UserId != CurrentUser.Id) return;
 
                 var deleteItem = await Application.Current.MainPage.DisplayAlert(
-                    "Remove", $"Remove the todo {Todo.Text}", "OK", "Never mind");
+                    "Remove", $"Remove the todo {Todo.Content}", "OK", "Never mind");
                 if (deleteItem)
                 {
-                    await DataStore.DeleteItemAsync(Todo);
+                    await DataStore.DeleteItemAsync(Todo.Id);
                     SessionService.Instance.UserTodos = await GetUserTodos();
 
                     var _searchTerm = DataStore.SearchTerm;
@@ -78,14 +75,14 @@ namespace Todo.ViewModels
             }
         });
         #endregion
-        public DetailTodoViewModel(Models.Todo todo, INavigation navigation)
+        public DetailTodoViewModel(TodoModel todo, INavigation navigation)
         {
             PageTitle = "Todo Detail Page";
 
             _navigation = navigation;
             Todo = todo;
             Tags = new ObservableCollection<string>(todo.TodoTags?.Select(tt => tt.Tag.Name) ?? new List<string>());
-;
+            ;
 
             CloseCommand = new Command(async () => await navigation.PopAsync());
         }

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Todo.Models;
+﻿using System.Collections.Generic;
+using TodoModel = Todo.Todo.ApiServices.Todo;
+using UserModel = Todo.Todo.ApiServices.User;
 
 namespace Todo.Helpers.Session
 {
@@ -12,12 +9,14 @@ namespace Todo.Helpers.Session
         private static SessionService _instance;
         public static SessionService Instance => _instance ?? (_instance = new SessionService());
 
-        public User CurrentUser { get; set; } = null;
-        public IList<Models.Todo> UserTodos { get; set; } = new List<Models.Todo>();
+        public UserModel CurrentUser { get; set; } = null;
+        public bool IsCurrentUserLoggedIn { get; set; } = false;
+        public IList<TodoModel> UserTodos { get; set; } = new List<TodoModel>();
 
         public void Logout()
         {
             CurrentUser = null;
+            IsCurrentUserLoggedIn = false;
             UserTodos.Clear(); // Clear the list instead of reassigning
         }
     }

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Todo.ViewModels;
+﻿using Todo.ViewModels;
 using Xamarin.Forms;
+
+using TodoModel = Todo.Todo.ApiServices.Todo;
 
 namespace Todo.Views
 {
@@ -9,10 +9,10 @@ namespace Todo.Views
     {
         private AddEditTodoViewModel _viewModel;
 
-        public AddEditTodoPage(Models.Todo todo = null)
+        public AddEditTodoPage(TodoModel todo = null)
         {
             InitializeComponent();
-            
+
             _viewModel = new AddEditTodoViewModel(Navigation, todo);
             BindingContext = _viewModel;
         }
