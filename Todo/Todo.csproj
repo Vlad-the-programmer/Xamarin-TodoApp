@@ -49,6 +49,7 @@
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Converters\InverseBoolConverter.cs" />
     <Compile Include="Converters\IsDoneToImageSourceConverter.cs" />
+    <Compile Include="Helpers\CustomerSSLBypass\BypassSslValidationHandler.cs" />
     <Compile Include="Helpers\DbFileHandler.cs" />
     <Compile Include="Helpers\Exceptions\ApiConflictException.cs" />
     <Compile Include="Helpers\Exceptions\ApiException.cs" />

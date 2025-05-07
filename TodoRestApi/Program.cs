@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Net;
 using System.Text;
 using TodoRestApi.Models.Contexts;
 
@@ -13,6 +14,15 @@ builder.Services.AddControllers()
         // Optional: preserve property casing or handle circular references
         options.JsonSerializerOptions.PropertyNamingPolicy = null;
     });
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Listen(IPAddress.Loopback, 5001, listenOptions =>
+    {
+        listenOptions.UseHttps("localhost.pem");
+    });
+});
+
 
 // Swagger/OpenAPI for documentation
 builder.Services.AddEndpointsApiExplorer();

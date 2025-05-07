@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-05T13:13:23.654</Modified>
+      <Modified>2025-05-07T11:51:16.367</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Todo.UWP.exe">
       <PackagePath>entrypoint\Todo.UWP.exe</PackagePath>
-      <Modified>2025-05-05T13:13:21.546</Modified>
+      <Modified>2025-05-07T11:51:14.149</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\.nuget\packages\pclstorage\1.0.2\lib\portable-win8+wpa81\PCLStorage.Abstractions.dll">
       <PackagePath>PCLStorage.Abstractions.dll</PackagePath>
@@ -76,7 +76,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Todo.dll">
       <PackagePath>Todo.dll</PackagePath>
-      <Modified>2025-05-05T13:13:15.061</Modified>
+      <Modified>2025-05-07T11:51:07.239</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo\bin\Debug\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -581,11 +581,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2025-05-05T13:13:21.429</Modified>
+      <Modified>2025-05-07T11:51:14.008</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2025-05-05T13:13:21.429</Modified>
+      <Modified>2025-05-07T11:51:14.008</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.22621.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -605,7 +605,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\klamc\source\repos\App1\App\Todo.UWP\bin\x86\Debug\Core\Todo.UWP.exe">
       <PackagePath>Todo.UWP.exe</PackagePath>
-      <Modified>2025-05-05T13:13:23.649</Modified>
+      <Modified>2025-05-07T11:51:16.357</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

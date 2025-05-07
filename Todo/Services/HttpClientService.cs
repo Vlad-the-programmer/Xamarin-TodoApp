@@ -10,6 +10,21 @@ namespace Todo.Services
 
         public HttpClientService()
         {
+            var handler = new HttpClientHandler();
+
+            //var bypassHandler = new BypassSslValidationHandler
+            //{
+            //    InnerHandler = handler
+            //};
+
+            //_client = new HttpClient(handler)
+            //{
+            //    BaseAddress = new Uri(Constants.Constants.BASE_URL),
+            //    Timeout = TimeSpan.FromSeconds(120)
+            //};
+
+
+            var client = new HttpClient(handler);
             _client = new HttpClient
             {
                 BaseAddress = new Uri(Constants.Constants.BASE_URL),
